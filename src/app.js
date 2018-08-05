@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-var profiles = require('./api/controllers/profiles.controller.js')(app);
 var users = require('./api/controllers/users.controller.js')(app);
 
 var port = process.env.PORT || 3000;

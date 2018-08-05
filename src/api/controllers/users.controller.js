@@ -1,6 +1,4 @@
 var _ = require('lodash');
-var Profile = require('../models/profile.js');
-var Question = require('../models/question.js')
 var User = require('../models/user.model.js');
 var async = require('async');
 var mongoose = require('mongoose');
@@ -186,7 +184,7 @@ module.exports = function (app) {
             });
     });
 
-    app.post('/block', function (req, res) {
+    app.put('/block', function (req, res) {
         var requestor = req.body.requestor;
         var target = req.body.target;
         var userList = [requestor, target];
